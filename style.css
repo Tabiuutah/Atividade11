@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Página Inicial */
+.home-page .hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(to bottom, #0a3d62, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.hero-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30vh;
+  background: linear-gradient(to bottom, #3a7bd5, transparent);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #7ec8ff; /* azul claro */
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+
+.hero-decorations {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.7rem;
+  z-index: 1;
+}
+
+.decoration-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #7ec8ff;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+/* Página Sobre Mim */
+.about-page .about-content {
+  max-width: 900px;
+  margin: 3rem auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.white-text {
+  color: #fff;
+  font-weight: 700;
+}
+
+.blue-text {
+  color: #7ec8ff;
+  font-weight: 700;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-instagram {
+  background-color: #e4405f;
+  color: #fff;
+}
+
+.btn-instagram:hover {
+  background-color: #b52a45;
+}
+
+.btn-github {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #7ec8ff;
+}
+
+.btn-github:hover {
+  background-color: #7ec8ff;
+  color: #000;
+}
+
+.about-image img {
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 10px #7ec8ff88;
+}
+
+@media (max-width: 700px) {
+  .about-page .about-content {
+    flex-direction: column;
+  }
+  .about-image img {
+    max-width: 100%;
+  }
+}
+
+.hero-link {
+  color: #7ec8ff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.hero-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
