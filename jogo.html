@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Média</title>
+</head>
+<body>
+  <h1>Jogo da Média</h1>
+  <button onclick="jogar()">Começar Jogo</button>
+
+  <script>
+    function jogar() {
+      let quantidade = parseInt(prompt("Quantos números você quer digitar?"));
+
+      if (isNaN(quantidade) || quantidade <= 0) {
+        alert("Quantidade inválida. Tente novamente.");
+      } else {
+        let soma = 0;
+
+        for (let i = 1; i <= quantidade; i++) {
+          let numero = parseFloat(prompt(`Digite o ${i}º número:`));
+
+          while (isNaN(numero)) {
+            numero = parseFloat(prompt(`Valor inválido. Digite o ${i}º número novamente:`));
+          }
+
+          soma += numero;
+        }
+
+        let media = soma / quantidade;
+        alert(`A média dos ${quantidade} números é: ${media.toFixed(2)}`);
+      }
+    }
+  </script>
+</body>
+</html>
